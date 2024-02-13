@@ -23,6 +23,7 @@ import { NavComponent } from './nav/nav.component';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { LoadingInterceptor } from './_interceptors/loading.interceptor';
+import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 
 // import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -40,7 +41,8 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
     NotFoundComponent,
     ServerErrorComponent,
     MemberCardComponent,
-    MemberEditComponent
+    MemberEditComponent,
+    PhotoEditorComponent
   ],
   imports: [
     //BrowserModule,
