@@ -18,12 +18,14 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { JwtInterceptor } from './_interceptors/jwt.interceptor';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavComponent } from './nav/nav.component';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { LoadingInterceptor } from './_interceptors/loading.interceptor';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+import { TextInputComponent } from './_forms/text-input/text-input.component';
+import { DatePickerComponent } from './_forms/date-picker/date-picker.component';
 
 // import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -42,14 +44,16 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
     ServerErrorComponent,
     MemberCardComponent,
     MemberEditComponent,
-    PhotoEditorComponent
+    PhotoEditorComponent,
+    TextInputComponent,
+    DatePickerComponent
   ],
   imports: [
     //BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     SharedModule,
     NgxGalleryModule

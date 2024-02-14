@@ -71,7 +71,7 @@ export class PhotoEditorComponent implements OnInit {
       allowedFileType: ['image'],
       removeAfterUpload: true,
       autoUpload: false,
-      maxFileSize: 10 * 1024 *1024
+      maxFileSize: 10 * 1024 * 1024
     });
 
     this.uploader.onAfterAddingFile = (file) => {
@@ -82,6 +82,11 @@ export class PhotoEditorComponent implements OnInit {
       if (response) {
         const photo = JSON.parse(response);
         this.member?.photos.push(photo);
+        if (photo.isMain && this.user && this.member) {
+          this.user.photoUrl = photo.url;
+          this.member.photoUrl = photo.url;
+          this.accountService.setCurrentUser(this.user);
+        }
       }
     }
   }
